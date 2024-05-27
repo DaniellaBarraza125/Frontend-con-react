@@ -16,22 +16,23 @@ function App() {
 
   return (
     <>
-    <Headers/>
+
     <BrowserRouter>
-    <ProductsProvider>
-      
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/profile" element={<Profile/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/products" element={<Products/>}/>
-        <Route path="products/products" element={<PrintedProducts/>}/>
-        <Route path="/cart" element={<Cart/>}/>
-        <Route path="/register" element={<Register/>}/>
-      </Routes> 
-    </ProductsProvider>
+        <Headers/>
+        <ProductsProvider>
+          
+          <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/profile" element={<Profile/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="products" element={<PrintedProducts/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="/register" element={<Register/>}/>
+          </Routes> 
+        </ProductsProvider>
+        <Footer/>
     </BrowserRouter>
-    <Footer/>
+
       
     </>
   )

@@ -1,4 +1,4 @@
-import "./Products.scss"
+
 import React, { useContext, useEffect } from 'react'
 import { ProductsContext } from "../../context/ProductsContext/ProductsState"
 
