@@ -1,11 +1,38 @@
-import "./Register.scss"
-
-import React from 'react'
+import Login from "../Login/Login";
+import "./Register.scss";
+import React from 'react';
 
 const Register = () => {
   return (
-    <div>Register</div>
-  )
+    <div className="container2">
+      <div className="container">
+        <div className="wrapper">
+          <div className="card-switch">
+            <label className="switch">
+              <input type="checkbox" className="toggle" />
+              <span className="slider"></span>
+              <span className="card-side"></span>
+              <div className="flip-card__inner">
+                <div className="flip-card__front">
+                  <div className="title">Log in</div>
+                  <Login/>
+                  </div>
+              <div className="flip-card__back">
+                  <div className="title">Sign up</div>
+                      <form className="flip-card__form" action="">
+                        <input className="flip-card__input" placeholder="Name" type="name" />
+                        <input className="flip-card__input" name="email" placeholder="Email" type="email" />
+                        <input className="flip-card__input" name="password" placeholder="Password" type="password" />
+                        <button className="flip-card__btn">Confirm!</button>
+                      </form>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Register
+export default Register;
