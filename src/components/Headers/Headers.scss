@@ -1,0 +1,23 @@
+@import '../../Colors.scss';
+@import '../../App.scss';
+
+
+nav{
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+    @extend %flex;
+    justify-content: space-between;
+    div{
+        @extend %flex;
+        padding: 2%;
+
+        img {
+            height: 40px; 
+        }
+        
+        span{
+            margin: 2%;
+            padding: 0 15px;
+        }
+    }
+}
