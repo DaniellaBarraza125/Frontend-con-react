@@ -1,16 +1,12 @@
 @import '../../Colors.scss';
 @import '../../App.scss';
 
-.container2{
-  @extend %flex;
-  margin-bottom: 20%;
-}
+
 .container{
-    margin-top: 20%;
     @extend %flex;
-    margin-bottom: 15%;
+    height: 300vh;
   
-}
+
     .wrapper {
     --input-focus: #2d8cf0;
     --font-color: #323232;
@@ -30,9 +26,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     width: 50px;
-    height: 20px;
+    height: 15px;
     }
 
     .card-side::before {
@@ -82,7 +78,7 @@
     box-sizing: border-box;
     position: absolute;
     content: "";
-    height: 20px;
+    height: 15px;
     width: 20px;
     border: 2px solid var(--main-color);
     border-radius: 5px;
@@ -113,7 +109,7 @@
 
     .flip-card__inner {
     width: 300px;
-    height: 350px;
+    height: 300px;
     position: relative;
     background-color: transparent;
     perspective: 1000px;
@@ -133,7 +129,7 @@
     }
 
     .flip-card__front, .flip-card__back {
-    padding: 20px;
+    padding: 15px;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -141,7 +137,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background: lightgrey;
-    gap: 20px;
+    gap: 15px;
     border-radius: 5px;
     border: 2px solid var(--main-color);
     box-shadow: 4px 4px var(--main-color);
@@ -150,6 +146,7 @@
     .flip-card__back {
     width: 100%;
     transform: rotateY(180deg);
+    margin-top: 35px;
     }
 
     .flip-card__form {
@@ -195,7 +192,7 @@
     }
 
     .flip-card__btn {
-    margin: 10px 0 10px 0;
+    margin: 7px 0 7px 0;
     width: 120px;
     height: 40px;
     border-radius: 5px;
@@ -255,3 +252,4 @@
         width: 1.5rem;
         height: 1.5rem;
       }
+    }

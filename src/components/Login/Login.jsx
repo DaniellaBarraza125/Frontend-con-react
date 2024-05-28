@@ -2,8 +2,10 @@ import '../Register/Register.scss';
 import React from 'react'
 
 const Login = () => {
+
+
   return (
-    <form className="flip-card__form" action=""> 
+    <form className="flip-card__form" > 
     <button className="oauthButton">
       <svg className="icon" viewBox="0 0 24 24">
         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
@@ -26,8 +28,8 @@ const Login = () => {
 <div></div>
 </div>
 
-  <input className="flip-card__input" name="email" placeholder="Email" type="email" />
-  <input className="flip-card__input" name="password" placeholder="Password" type="password" />
+  <input className="flip-card__input" name="email" placeholder="Email" type="email" id="email"/>
+  <input className="flip-card__input" name="password" placeholder="Password" type="password" id="password"/>
   <button className="flip-card__btn">Let's go!</button>
 </form>
   )

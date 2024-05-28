@@ -4,7 +4,7 @@ import React from 'react';
 
 const Register = () => {
   return (
-    <div className="container2">
+    
       <div className="container">
         <div className="wrapper">
           <div className="card-switch">
@@ -31,7 +31,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 }
 
