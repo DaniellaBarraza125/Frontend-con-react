@@ -1,9 +1,18 @@
+import { UserContext } from "../../context/UserContext/UserState";
 import "./Profile.scss"
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 
 const Profile = () => {
+  const { getUserInfo, user, token } = useContext(UserContext);
+  useEffect(() => {
+    getUserInfo();
+  }, [token]);
+console.log(user);
+  if (!user) {
+    return <div>Esperanos un poco</div>;
+  }
   return (
-    <div>Profile</div>
+    <div>{user.name}</div>
   )
 }
 

@@ -21,13 +21,14 @@ const handleInputChange = (e) => {
     [e.target.name]: e.target.value,
   });
 };
-
+//preguntar cosas 
 const handleOnSubmit = (e)=>{
   e.preventDefault();
   const ddata= data
   login(ddata)
   setData(initialValue);
   navigate("/profile")
+
 
 }
 
