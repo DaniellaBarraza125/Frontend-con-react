@@ -4,9 +4,11 @@ import React, { useContext, useEffect } from 'react'
 
 const Profile = () => {
   const { getUserInfo, user, token } = useContext(UserContext);
+
   useEffect(() => {
     getUserInfo();
   }, [token]);
+  
 console.log(user);
   if (!user) {
     return <div>Esperanos un poco</div>;
