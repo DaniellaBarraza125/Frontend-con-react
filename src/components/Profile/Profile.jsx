@@ -15,14 +15,15 @@ console.log(user);
     return <div>Esperanos un poco</div>;
   }
   return (
-    <div>{user.name}
-    <Cart/>
+    <div className="containerProfile">
     <div className="panel">
                         <h3>
                             <img className="img" src="https://bootdey.com/img/Content/user_3.jpg" alt="User" />
-                            Matew darfkmoun
+                            {user.name}
                         </h3>
+         
                     </div>
+
     </div>
   )
 }
