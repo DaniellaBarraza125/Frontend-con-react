@@ -11,6 +11,8 @@ import Register from './components/Register/Register'
 import { ProductsProvider } from './context/ProductsContext/ProductsState'
 import PrintedProducts from './components/Products/PrintedProducts'
 import { UserProvider } from './context/UserContext/UserState'
+import Products from './components/Products/Products'
+import Orders from './components/Orders/Orders'
 
 function App() {
 
@@ -23,10 +25,12 @@ function App() {
         <Headers/>
           <Routes>
             <Route path="/" element={<Home/>}/>
-                  <Route path="products" element={<PrintedProducts/>}/>
+                  <Route path="products" element={<Products/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/login" element={<Login/>}/>
+                <Route path="/orders" element={<Orders/>}/>
                 <Route path="/register" element={<Register/>}/>
           </Routes> 
               </UserProvider>

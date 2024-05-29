@@ -4,9 +4,15 @@ import ProducstReducer from "./ProductsReducer"
 
 const API_URL = "http://localhost:3002/products"
 
+
+
 const initialState = {
-    products:[]
-}
+    products: [],
+};
+
+
+
+
 
 export const ProductsContext = createContext(initialState)
 
@@ -20,9 +26,22 @@ export const ProductsProvider = ({children}) => {
             payload:res.data
         })
     }
+    const addCart = (product) => {
+        dispatch({
+            type: "ADD_CART",
+            payload: product
+            
+        })
+    }
+    const clearCart = () => {
+        dispatch({
+            type: "CLEAR_CART",
+            
+        })
+    }
     return (
         <ProductsContext.Provider value={{products: state.products,
-            getProducts,
+            getProducts,addCart, clearCart
             
         }}>
             {children}

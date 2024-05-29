@@ -1,48 +1,24 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import { ProductsContext } from '../../context/ProductsContext/ProductsState'
 import "./PrintedProducts.scss";
-import "./Hamster.scss"
+import "../Spinner/HamsterSpiner/Hamster.scss"
+import HamsterSpiner from '../Spinner/HamsterSpiner/HamsterSpiner';
 
 const PrintedProducts = () => {
 const API_URL = "http://localhost:3002/";
 
-    const { products, getProducts} = useContext(ProductsContext)
-    useEffect(()=>{
-        getProducts();
-    },[])
+    const { products, addCart} = useContext(ProductsContext)
 
     if (products.length <= 0){
         return (
-            <div className="what">
-            <div className='"hamsterContainer'>
-                <div aria-label="Orange and tan hamster running in a metal wheel" role="img" className="wheel-and-hamster">
-                    <div className="wheel"></div>
-                        <div className="hamster">
-                            <div className="hamster__body">
-                                <div className="hamster__head">
-                                    <div className="hamster__ear"></div>
-                                    <div className="hamster__eye"></div>
-                                    <div className="hamster__nose"></div>
-                                </div>
-                                <div className="hamster__limb hamster__limb--fr"></div>
-                                <div className="hamster__limb hamster__limb--fl"></div>
-                                <div className="hamster__limb hamster__limb--br"></div>
-                                <div className="hamster__limb hamster__limb--bl"></div>
-                                <div className="hamster__tail"></div>
-                            </div>
-                        </div>
-                    <div className="spoke"></div>
-                </div>
-            </div>
-            <h1>Cargando...</h1>
-            </div>
+            <HamsterSpiner/>
     )
 }
     return (
         <div className='cards-container'>
         {products.map((product, i)=>{
         const img = product.filePath;
-            console.log(img);
+
             return(
                 
                 <div className="card" key={i}>
@@ -62,6 +38,7 @@ const API_URL = "http://localhost:3002/";
                     <path d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z"></path>
                     </svg>
                 </div>
+                <button onClick={()=>addCart(product)}>Add cart</button>
                 </div></div>
             )
         })}

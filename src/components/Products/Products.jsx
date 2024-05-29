@@ -1,17 +1,17 @@
 
 import React, { useContext, useEffect } from 'react'
 import { ProductsContext } from "../../context/ProductsContext/ProductsState"
+import PrintedProducts from './PrintedProducts'
 
 const Products = () => {
-  const { products, getProducts} =useContext(ProductsContext)
+  const { getProducts} =useContext(ProductsContext)
 
   useEffect(()=>{
     getProducts();
   },[])
-  console.log(products);
 
   return (
-    <div>Products</div>
+    <PrintedProducts/>
   )
 }
 
