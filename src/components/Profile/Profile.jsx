@@ -1,4 +1,5 @@
 import { UserContext } from "../../context/UserContext/UserState";
+import Cart from "../Cart/Cart";
 import "./Profile.scss"
 import React, { useContext, useEffect } from 'react'
 
@@ -14,7 +15,15 @@ console.log(user);
     return <div>Esperanos un poco</div>;
   }
   return (
-    <div>{user.name}</div>
+    <div>{user.name}
+    <Cart/>
+    <div className="panel">
+                        <h3>
+                            <img className="img" src="https://bootdey.com/img/Content/user_3.jpg" alt="User" />
+                            Matew darfkmoun
+                        </h3>
+                    </div>
+    </div>
   )
 }
 

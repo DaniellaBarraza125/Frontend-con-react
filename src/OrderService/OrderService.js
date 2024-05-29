@@ -3,11 +3,14 @@ import axios from "axios";
 const API_URL = "http://localhost:3002/orders";
 
 const createOrder = async (cart) => {
-    const token = JSON.parse(localStorage.getItem("token"));
+    const token = localStorage.getItem("token");
     try {
+        console.log({ cart });
+        const productsIds = cart.map((product) => product.id);
+
         await axios.post(
-            API_URL + "/orders",
-            { productIds: cart },
+            API_URL + "/",
+            { ProductId: productsIds },
             {
                 headers: {
                     authorization: token,
@@ -19,8 +22,8 @@ const createOrder = async (cart) => {
     }
 };
 
-const orderService = {
+const OrderService = {
     createOrder,
 };
 
-export default orderService;
+export default OrderService;

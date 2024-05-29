@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { ProductsContext } from '../../context/ProductsContext/ProductsState'
 import "./PrintedProducts.scss";
-import "../Spinner/HamsterSpiner/Hamster.scss"
 import HamsterSpiner from '../Spinner/HamsterSpiner/HamsterSpiner';
 
 const PrintedProducts = () => {

@@ -1,38 +1,33 @@
+import React from 'react';
 import Login from "../Login/Login";
 import "./Register.scss";
-import React from 'react';
 
 const Register = () => {
   return (
-    
-      <div className="container">
-        <div className="wrapper">
-          <div className="card-switch">
-            <label className="switch">
-              <input type="checkbox" className="toggle" />
-              <span className="slider"></span>
-              <span className="card-side"></span>
-              <div className="flip-card__inner">
-                <div className="flip-card__front">
-                  <div className="title">Log in</div>
-                  <Login/>
-                  </div>
+    <div>
+      <div className="wrapper">
+        <div className="card-switch">
+          <label className="switch">
+            <input className="toggle" type="checkbox" />
+            <span className="slider"></span>
+            <span className="card-side"></span>
+            <div className="flip-card__inner">
+                <Login/>
               <div className="flip-card__back">
-                  <div className="title">Sign up</div>
-                      <form className="flip-card__form" action="">
-                        <input className="flip-card__input" placeholder="Name" type="name" />
-                        <input className="flip-card__input" name="email" placeholder="Email" type="email" />
-                        <input className="flip-card__input" name="password" placeholder="Password" type="password" />
-                        <button className="flip-card__btn">Confirm!</button>
-                      </form>
-                </div>
+                <div className="title">Sign up</div>
+                <form action="" className="flip-card__form">
+                  <input type="text" placeholder="Name" name="name" className="flip-card__input" />
+                  <input type="email" placeholder="Email" name="email" className="flip-card__input" />
+                  <input type="password" placeholder="Password" name="password" className="flip-card__input" />
+                  <button className="flip-card__btn">Confirm!</button>
+                </form>
               </div>
-            </label>
-          </div>
+            </div>
+          </label>
         </div>
       </div>
-
+    </div>
   );
-}
+};
 
 export default Register;

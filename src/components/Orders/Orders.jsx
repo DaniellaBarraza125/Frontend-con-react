@@ -90,6 +90,25 @@ const Orders = () => {
             <a href="#" className="btn btn-primary pull-right">Next<span className="glyphicon glyphicon-chevron-right"></span></a>
         </div>
     </div>
+
+
+    
+    <div className="summary">
+                            <div className="summary-row">
+                                <div className="summary-label">Total Product</div>
+                                <div className="summary-value"> 
+                                </div>
+                            </div>
+                            <div className="summary-row">
+                                <div className="summary-label">Total Shipping</div>
+                                <div className="summary-value">$2.00</div>
+                            </div>
+                            <div className="summary-row">
+                                <div className="summary-label"><strong>Total</strong></div>
+                                <div className="summary-value">
+                                </div>
+                            </div>
+                        </div>
 </div>
   )
 }
