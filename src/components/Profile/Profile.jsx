@@ -15,16 +15,26 @@ console.log(user);
     return <div>Esperanos un poco</div>;
   }
   return (
-    <div className="containerProfile">
-    <div className="panel">
-                        <h3>
-                            <img className="img" src="https://bootdey.com/img/Content/user_3.jpg" alt="User" />
-                            {user.name}
-                        </h3>
-         
-                    </div>
-
+<div className="containerProfile">
+  <div className="profile">
+    <div className="userInfo">
+      <div className="imgContainer">
+        <img className="img" src="https://bootdey.com/img/Content/user_3.jpg" alt="User" />
+      </div>
+      <div className="info">
+        <h3>Nombre: {user.name}</h3>
+        <p>Correo electronico:</p>
+        <p>{user.email}</p>
+      </div>
     </div>
+    <div className="sections">
+      <div className="orders">soy pedidos</div>
+      <div className="cart">soy carrito</div>
+      <div className="wishList">soy likes</div>
+    </div>
+  </div>
+</div>
+
   )
 }
 

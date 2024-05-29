@@ -1,15 +1,67 @@
 @import "../../Colors.scss";
+@import "../../App.scss";
 
+.containerProfile {
+    @extend %flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #ffe6e6; 
+    padding: 20px;
+    min-height: 100vh; 
 
-.panel-heading {
-        background-color: #f5f5f5;
+.profile {
+    margin: 5%;
+    width: 70vw;
+    background-color: #fff; 
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+
+.userInfo {
+    @extend %flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
     border-bottom: 1px solid $border;
     padding: 10px 15px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    margin: 5%;
+.info{
+    padding: 2%;
 }
 
-.panel-heading h3 {
+img {
+    height: 15vh;
+    border-radius: 50%; 
+    }
+
+    div {
+    height: 20vh;
+    }
+
+    h3 {
     margin: 0;
     font-size: 24px;
+    }
+    }
+
+.orders,
+.cart,
+.wishList {
+    @extend %flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0; 
+    flex: 1;
+    }
+
+    .sections {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    }
 }
