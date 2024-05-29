@@ -6,11 +6,16 @@ import { ProductsContext } from "../../context/ProductsContext/ProductsState"
 
 const Headers = () => {
 
+
+
   const {token, logout } = useContext(UserContext)
   const {cart} = useContext(ProductsContext)
   const navigate = useNavigate();
 
 
+ useEffect(()=>{
+    localStorage.setItem("cart",JSON.stringify(cart))
+  },[cart])
 
 
 

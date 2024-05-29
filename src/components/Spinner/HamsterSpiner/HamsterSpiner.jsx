@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Hamster.scss"
 
+
 const HamsterSpiner = () => {
     return (
         <div className="what">
@@ -24,7 +25,7 @@ const HamsterSpiner = () => {
                     <div className="spoke"></div>
                 </div>
             </div>
-            <h1>Cargando...</h1>
+          
         </div>
     )
 }

@@ -20,9 +20,9 @@ const Orders = () => {
     }, [user]);
 
     if (!user) {
-        return (
-          <HamsterSpiner/>
-        );
+        return (    
+            <HamsterSpiner/>  
+        );  
     }
 
     
@@ -34,8 +34,8 @@ const Orders = () => {
             setProductQuantities(prevQuantities => ({
                 ...prevQuantities,
                 [index]: value
-              }
-          )
+            }
+        )
         )
         
     };
