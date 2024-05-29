@@ -16,6 +16,7 @@ const users = (state, action) => {
                 token: "",
                 user: null,
             };
+
         default:
             return state;
     }

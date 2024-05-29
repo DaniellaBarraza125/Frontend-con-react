@@ -68,13 +68,22 @@ const logout = async()=>{
         console.error(error);
     }
 }
+const signup = async (user) => {
+    try {
+    await axios.post(API_URL + "/", user);
+    
+    } catch (error) {
+        console.error(error)
+    }
+};
+
     return (
     <UserContext.Provider
         value={{
             token: state.token,
             user: state.user,
             login, 
-            getUserInfo, logout,
+            getUserInfo, logout,signup
 
         }}
         >

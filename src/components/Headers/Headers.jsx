@@ -3,6 +3,7 @@ import  { useContext, useEffect } from 'react'
 import { Link, useNavigate } from "react-router-dom"
 import { UserContext } from "../../context/UserContext/UserState"
 import { ProductsContext } from "../../context/ProductsContext/ProductsState"
+import logo from "../../assets/logo/logo.png";
 
 const Headers = () => {
 
@@ -18,11 +19,10 @@ const Headers = () => {
   },[cart])
 
 
-
   return (
     <nav>
       <div className="logo">
-        <img src="" alt="Logo" />
+        <img src={logo} alt="Logo" />
       </div>
       <div>
         <span><Link to="/">Home</Link></span>
