@@ -1,5 +1,6 @@
 import { UserContext } from "../../context/UserContext/UserState";
 import Cart from "../Cart/Cart";
+import Orders from "../Orders/Orders";
 import "./Profile.scss"
 import React, { useContext, useEffect } from 'react'
 
@@ -18,7 +19,7 @@ console.log(user);
 <div className="containerProfile">
   <div className="profile">
     <div className="userInfo">
-      <div className="imgContainer">
+      <div className="profileImgContainer">
         <img className="img" src="https://bootdey.com/img/Content/user_3.jpg" alt="User" />
       </div>
       <div className="info">
@@ -28,9 +29,15 @@ console.log(user);
       </div>
     </div>
     <div className="sections">
-      <div className="orders">soy pedidos</div>
-      <div className="cart">soy carrito</div>
-      <div className="wishList">soy likes</div>
+      <div className="profileSection">
+        <div>Tus pedidos</div>
+        <Orders/>
+      </div>
+      <div className="profileSection">
+        <div>Tu carrito</div>
+        <Cart/>
+        </div>
+      <div className="profileSection">soy likes</div>
     </div>
   </div>
 </div>

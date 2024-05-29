@@ -5,43 +5,41 @@
 .spinerContainer{
 @extend %flex;
 flex-direction: column;
-width: 50%;
+width: 100%;
 }
+.cartContainer {
+        font-family: Arial, sans-serif;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; 
 
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    
-    .container {
-    width: 60%;
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
 
 .panel {
     border-bottom: 1px solid $border;
-    margin-bottom: 20px;
+    height: 65vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 
     
 }
-.content{
-    background-color: rgb(200, 226, 247);
-    padding: 5%;
-    border-radius: 5px;
-}
+
 .panel-body {
-    padding: 15px;
+    padding: 8px;
 }
 
-.product {
+.cartProduct {
     display: flex;
+    background-color: #ffffff;
     align-items: center;
-    padding: 10px 0;
+    flex-direction: row;
+    padding: 10px 30px;
+    border-radius: 7px;
 }
 
-.product:last-child {
+.cartProduct:last-child {
     border-bottom: none;
 }
 
@@ -77,6 +75,7 @@ body {
 
 }
 .btns{
+    padding: 15px 20px ;
     @extend %flex;
     justify-content: space-between;
     .btn{
@@ -128,5 +127,10 @@ body {
     margin:20px
 }
 }
+.content{
+    background-color: rgb(200, 226, 247);
+    padding: 1%;
+    border-radius: 5px;
+    width: 81vw;
 
 }

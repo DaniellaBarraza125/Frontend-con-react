@@ -1,10 +1,10 @@
 @import '../../Colors.scss';
 @import '../../App.scss';
 
-.cards-container{
+.printedProductContainer{
     @extend %flex;
     flex-wrap: wrap;
-.card {
+.printedProductCard {
     width: 20%;
   padding: 0.8em;
   margin: 2%;
@@ -13,7 +13,7 @@
   overflow: visible;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-  .card-img {
+  .printedProductImg {
     @extend %flex;
     background-color: #ffcaa6;
     height: 40%;
@@ -33,11 +33,11 @@
     }
   }
 
-  .card-info {
+  .printedProductInfo {
     padding-top: 10%;
   }
 
-  .card-footer {
+  .printedProductFfooter {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -46,18 +46,14 @@
     border-top: 1px solid #ddd;
   }
 
-  .text-title {
+  .printedProductTitle {
     font-weight: 900;
     font-size: 1.2em;
     line-height: 1.5;
   }
 
-  .text-body {
-    font-size: 0.9em;
-    padding-bottom: 10px;
-  }
 
-  .card-button {
+  .printedProductCardBtn {
     border: 1px solid #252525;
     display: flex;
     padding: 0.3em;
