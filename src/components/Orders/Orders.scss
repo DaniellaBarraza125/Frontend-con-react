@@ -1,4 +1,4 @@
-/* Custom CSS */
+@import "../../Colors.scss";
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-    background-color: red;
+    background-color: rgb(200, 226, 247);
     margin: 0 auto;
     padding: 20px;
 }
@@ -14,14 +14,14 @@ body {
 
 
 .panel {
-    border: 1px solid #ddd;
+    border: 1px solid $border;
     border-radius: 4px;
     margin-bottom: 20px;
 }
 
 .panel-heading {
     background-color: #f5f5f5;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $border;
     padding: 10px 15px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -42,7 +42,7 @@ body {
     padding: 4px;
     line-height: 1.42857143;
     background-color: #fff;
-    border: 1px solid #ddd;
+    border: 1px solid ;
     border-radius: 4px;
     display: inline-block;
     max-width: 100%;
@@ -52,7 +52,7 @@ body {
 .product {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $border;
     padding: 10px 0;
 }
 

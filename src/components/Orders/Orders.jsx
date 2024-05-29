@@ -7,17 +7,11 @@ import HamsterSpiner from '../Spinner/HamsterSpiner/HamsterSpiner';
 
 const Orders = () => {
     const { token, user, getUserInfo } = useContext(UserContext);
-    const [productQuantities, setProductQuantities] = useState({});
 
     useEffect(() => {
         getUserInfo();
     }, [token]);
 
-    useEffect(() => {
-        if (user && user.Orders) {
-            setProductQuantities({});
-        }
-    }, [user]);
 
     if (!user) {
         return (    
@@ -29,17 +23,8 @@ const Orders = () => {
     const orders = user.Orders;
     const orderedProducts = orders[0].Products;
     
-    const handleInputChange = (event, index) => {
-        const value = parseInt(event.target.value, 10);
-            setProductQuantities(prevQuantities => ({
-                ...prevQuantities,
-                [index]: value
-            }
-        )
-        )
-        
-    };
-  return (
+    
+    return (
     <div className="container">
     <div className="content">
         <div>
@@ -52,9 +37,10 @@ const Orders = () => {
                 </div>
                 <div className="panel-body">
                     {orderedProducts.map((product, i) => {
-                      const API_URL = "http://localhost:3002/";
-                      const img = product.filePath;
-                      return (
+                        const API_URL = "http://localhost:3002/";
+                        const img = product.filePath;
+                        const price = product.price
+                        return (
 
                         <div className="product" key={i}>
                             <div className="product-image">
@@ -65,29 +51,27 @@ const Orders = () => {
                             </div>
                             <div className="product-qty">
                                 <form className="form-inline">
-                                    <input
+                                    <input id="input"
                                         className="form-control"
                                         type="number"
-                                        value={productQuantities[i] || 1}
                                         min="0"
                                         max="10"
-                                        onChange={(event) => handleInputChange(event, i)}
                                     />
                                 </form>
                             </div>
                             <div className="product-price">
-                                {product.price}
+                                {price}.00 €
                             </div>
                             <div className="product-total">
-                                ${product.price * (productQuantities[i] || 1)}
+                                {price}.00 €
                             </div>
                         </div>)
                     
-})}
+                })}
                     <div className="summary">
                         <div className="summary-row">
                             <div className="summary-label">Total Product</div>
-                            <div className="summary-value">
+                            <div className="summary-value"> 
                             </div>
                         </div>
                         <div className="summary-row">
