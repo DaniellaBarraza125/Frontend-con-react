@@ -3,6 +3,7 @@ import "./Login.scss"
 import { UserContext } from '../../context/UserContext/UserState';
 import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { notification } from 'antd';
 
 
 const Login = () => {
@@ -23,14 +24,23 @@ const handleInputChange = (e) => {
   });
 };
 //preguntar cosas 
-const handleOnSubmit = (e)=>{
+const handleOnSubmit = async (e)=>{
   e.preventDefault();
-  const ddata= data
-  login(ddata)
+  const res = await login(data)
+  console.log(res);
+  if (res){
+
   setData(initialValue);
+  notification.success({
+    message: 'Welcome'
+  });
   navigate("/profile")
-
-
+} else{
+  console.log(res);
+notification.error({
+  message: 'error'
+})
+}
 }
 
   return (

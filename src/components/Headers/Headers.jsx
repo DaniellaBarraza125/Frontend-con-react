@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom"
 import { UserContext } from "../../context/UserContext/UserState"
 import { ProductsContext } from "../../context/ProductsContext/ProductsState"
 import logo from "../../assets/logo/logo.png";
+import { Badge } from 'antd';
+
 
 const Headers = () => {
 
@@ -20,7 +22,7 @@ const Headers = () => {
 
 
   return (
-    <nav>
+    <nav className="navDiv">
       <div className="logo">
         <img src={logo} alt="Logo" />
       </div>
@@ -41,7 +43,7 @@ const Headers = () => {
             Logout
           </button>
           <span><Link to="/orders">Orders</Link></span>
-          <span><Link to="/cart">Cart</Link></span>
+          <span><Link to="/cart">Cart<Badge count={cart.length} size="small"></Badge></Link></span>
         </>):(
           <span><Link to="/register">Log in</Link></span>
         )}

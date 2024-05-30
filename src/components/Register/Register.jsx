@@ -2,6 +2,8 @@ import "./Register.scss";
 import React, { useContext, useState, useEffect } from 'react';
 import Login from "../Login/Login";
 import { UserContext } from '../../context/UserContext/UserState';
+import { notification } from 'antd';
+
 
 
 
@@ -39,14 +41,20 @@ const Register = () => {
 
   const handleOnSubmit = async (e) => {
     e.preventDefault();
-      try {
-      console.log(data);
-      await signup(data);
+    const res = await signup(data);
+    if (res){
       setData(initialValue);
+      notification.success({
+        message: 'User created'
+      });
       showLogin()
-    } catch (error) {
-      console.error(error);
-    }
+      }
+      else{
+        console.log(res);
+      notification.error({
+        message: 'error'
+      })
+      }
   };
 
   return (

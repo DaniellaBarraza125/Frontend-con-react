@@ -28,6 +28,7 @@ export const UserProvider = ({children})=>{
             if (res.data) {
                 localStorage.setItem("token", res.data.token);
         }
+        return res
         } catch (error) {
             console.error(error);
             
@@ -70,8 +71,8 @@ const logout = async()=>{
 }
 const signup = async (user) => {
     try {
-    await axios.post(API_URL + "/", user);
-    
+    const res = await axios.post(API_URL + "/", user);
+    return res
     } catch (error) {
         console.error(error)
     }
