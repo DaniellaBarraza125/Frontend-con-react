@@ -31,10 +31,10 @@ const Register = () => {
     });
   };
   const flip = document.getElementById("flip");
-  const showSignUp = () => {
-    flip.checked = true; 
+  // const showSignUp = () => {
+  //   flip.checked = true; 
 
-  }
+  // }
   const showLogin = () => {
     flip.checked = false; 
   }
@@ -62,7 +62,7 @@ const Register = () => {
       <div className="wrapper">
         <div className="card-switch">
           <label className="switch">
-            <input id="flip" className="toggle" type="checkbox"/>
+            <input id="flip" className="toggle" type="checkbox" />
             <span className="slider"></span>
             <span className="card-side"></span>
             <div className="flip-card__inner">

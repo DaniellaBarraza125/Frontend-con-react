@@ -15,6 +15,16 @@ const products = (state, action) => {
                 ...state,
                 cart: [],
             };
+        case "SET_CART":
+            return {
+                ...state,
+                cart: state.cart.map((item) => {
+                    if (item.id == action.payload.id) {
+                        return (item = action.payload);
+                    }
+                    return item;
+                }),
+            };
 
         default:
             return state;

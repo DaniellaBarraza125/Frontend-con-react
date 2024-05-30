@@ -4,7 +4,7 @@ import { ProductsContext } from "../../context/ProductsContext/ProductsState"
 import PrintedProducts from './PrintedProducts'
 
 const Products = () => {
-  const { getProducts, products, addCart, cart} =useContext(ProductsContext)
+  const { getProducts, cart} =useContext(ProductsContext)
 
   
 

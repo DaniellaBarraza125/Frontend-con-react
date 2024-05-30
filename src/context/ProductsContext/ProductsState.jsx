@@ -34,11 +34,24 @@ export const ProductsProvider = ({children}) => {
             type: "CLEAR_CART",
         });
     };
-    
+    const setCart = (cartItem) =>{
+        dispatch({
+            type: "SET_CART",
+            payload: cartItem
+
+        })
+    }
+    const getProductByName = async ()=>{
+        try {
+            const res = await axios.get(API_URL + "/name/:name", );
+            return res
+            } catch (error) {
+                console.error(error)
+            }
+        }
     return (
         <ProductsContext.Provider value={{products: state.products,cart: state.cart,
-            getProducts,addCart,clearCart
-            
+            getProducts,addCart,clearCart,setCart,getProductByName           
         }}>
             {children}
         </ProductsContext.Provider>

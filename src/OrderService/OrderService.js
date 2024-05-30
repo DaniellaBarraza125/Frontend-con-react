@@ -6,17 +6,15 @@ const createOrder = async (cart) => {
     const token = localStorage.getItem("token");
     try {
         console.log({ cart });
-        const productsIds = cart.map((product) => product.id);
+        const product = cart.map((product) => {
+            return { ProductId: product.id, units: product.units };
+        });
 
-        await axios.post(
-            API_URL + "/",
-            { ProductId: productsIds },
-            {
-                headers: {
-                    authorization: token,
-                },
+        await axios.post(API_URL + "/", product, {
+            headers: {
+                authorization: token,
             },
-        );
+        });
     } catch (error) {
         console.error(error);
     }

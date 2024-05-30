@@ -118,9 +118,7 @@
 .giro ~ .flip-card__inner {
   transform: rotateY(180deg);
 }
-// .toggle:checked ~ .flip-card__front {
-//   box-shadow: none;
-// }
+
 
 .flip-card__front, .flip-card__back {
   padding: 20px;

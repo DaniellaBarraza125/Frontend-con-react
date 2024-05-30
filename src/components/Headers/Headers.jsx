@@ -27,13 +27,19 @@ const Headers = () => {
         <img src={logo} alt="Logo" />
       </div>
       <div>
-        <span><Link to="/">Home</Link></span>
-        <span><Link to="/products">Products</Link></span>
+        <button className="btn"><Link to="/">Home</Link></button>
+        <button className="btn" ><Link to="/products">Products</Link></button>
         
         
         {token ? (<> 
-          <span><Link to="/profile">Profile</Link></span>
-          <button
+          <div className="containerBtn">
+          <button className="btn"><Link to="/profile">Profile</Link></button>
+          </div>
+            
+          
+          <button className="btn"><Link to="/orders">Orders</Link></button>
+          <button className="btn"><Link to="/cart"><Badge count={cart.length} size="large">Cart</Badge></Link></button>
+          <button className="btn"
             onClick={() => {
               console.log("holi tuu")
               logout();
@@ -42,10 +48,8 @@ const Headers = () => {
           >
             Logout
           </button>
-          <span><Link to="/orders">Orders</Link></span>
-          <span><Link to="/cart">Cart<Badge count={cart.length} size="small"></Badge></Link></span>
         </>):(
-          <span><Link to="/register">Log in</Link></span>
+          <button className="btn"><Link to="/register">Log in</Link></button>
         )}
       
       </div>

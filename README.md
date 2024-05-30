@@ -5,6 +5,7 @@ Este es el frontend para una plataforma de comercio electrónico construida util
 ## Tabla de Contenidos
 
 -   [Introducción](#introducción)
+-   [Diseño](#diseño)
 -   [Características](#características)
 -   [Instalación](#instalación)
 -   [Uso](#uso)
@@ -12,11 +13,14 @@ Este es el frontend para una plataforma de comercio electrónico construida util
 -   [Autor](#autor)
 -   [Capturas de Pantalla](#capturas-de-pantalla)
 -   [Repositorio del Backend](#repositorio-del-backend)
--   [Licencia](#licencia)
 
-## Introducción
+Este proyecto es una aplicación web de comercio electrónico que permite a los usuarios navegar por productos, agregarlos a su carrito y proceder al pago. La aplicación utiliza React para construir la interfaz de usuario, React Router para la navegación y Context API para la gestión del estado. Además, cuenta con componentes reutilizables que pueden ser utilizados en otros componentes, como el "HamsterSpinner", que se utiliza en varios lugares para mostrar un indicador de carga.
 
-Este proyecto es una aplicación web de comercio electrónico que permite a los usuarios navegar por productos, agregarlos a su carrito y proceder al pago. La aplicación utiliza React para construir la interfaz de usuario, React Router para la navegación y Context API para la gestión del estado.
+## Diseño
+
+Hemos utilizado medidas relativas como `vh`, `vw`, `rem` y `%` para facilitar la responsividad de la aplicación. También hemos utilizado flexbox y media queries (`max-width`/`min-width`) cuando ha sido necesario para adaptar el diseño a diferentes tamaños de pantalla.
+
+Además, hemos estructurado nuestros estilos de manera organizada. Tenemos un archivo `app.scss` donde hemos puesto los estilos que se reutilizarán en diferentes archivos para mantener un código limpio y modular. Además, hemos creado un archivo `Colors.scss` donde guardamos los colores utilizados en la aplicación para una gestión más centralizada y fácil de mantener.
 
 ## Características
 

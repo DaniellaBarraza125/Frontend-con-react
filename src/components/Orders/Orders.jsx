@@ -25,10 +25,13 @@ const Orders = () => {
     const API_URL = "http://localhost:3002/";
 
     return (
-        <div className="ordersContainer">
+<div className="superContainer">        
+    <div className="ordersContainerDiv">
+        <h2 className="orderTextDiv">Orders</h2>
+        <div className="divOrdersContainer">
             {orders.map((order, i) => (
-                <div key={i} className="orderCard">
-                    <div className='orderInfo'>
+                <div key={i} className="orderCardDiv">
+                    <div className='orderInfoDiv'>
                         <div>Order {order.id}</div>
                         <div>Status: {order.status}</div>
                     {/* <div>Delivery: {order.delivery}</div> */}
@@ -47,6 +50,10 @@ const Orders = () => {
                 </div>
             ))}
         </div>
+    </div>      
+
+</div>
+        
     );
 };
 
