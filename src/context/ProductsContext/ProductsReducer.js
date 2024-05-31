@@ -35,6 +35,26 @@ const products = (state, action) => {
                 ...state,
                 likes: action.payload,
             };
+        case "PRODUCT_BY_NAME":
+            return {
+                ...state,
+                products: action.payload,
+            };
+        case "ORDER_ASCEN":
+            return {
+                ...state,
+                products: action.payload,
+            };
+        case "ORDER_DESC":
+            return {
+                ...state,
+                products: action.payload,
+            };
+        case "GET_BY_PRICE":
+            return {
+                ...state,
+                products: action.payload,
+            };
 
         default:
             return state;

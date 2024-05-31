@@ -29,7 +29,7 @@ const Orders = () => {
     <div className="ordersContainerDiv">
         <h2 className="orderTextDiv">Orders</h2>
         <div className="divOrdersContainer">
-            {orders.map((order, i) => (
+            {orders.map((order, i) => ( 
                 <div key={i} className="orderCardDiv">
                     <div className='orderInfoDiv'>
                         <div>Order {order.id}</div>

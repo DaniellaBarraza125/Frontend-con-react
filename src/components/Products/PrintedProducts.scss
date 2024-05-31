@@ -150,6 +150,9 @@ button:hover svg {
   width: 220px;
   position: relative;
   padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+
 }
 
 .icon {
@@ -192,4 +195,70 @@ button:hover svg {
 }
 .filtersDivPrintedProducts{
   @extend %flex;
+  margin-bottom: 10px;
 }
+.inputSearchDiv{
+  display:flex;
+  width: 100%;
+  background-color:pink;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+.searchBarDiv, .filterButtonsContainer{
+  @extend %flex;
+}
+
+
+  .filterButtonsBtn {
+    margin: 10px;
+      padding: 10px 20px;
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      font-family: inherit;
+      font-size: 11px;
+  }
+  
+  .filterButtonsBtn {
+      font-weight: 600;
+      width: 10vh;
+      font-size: 2vh;
+      color: #382b22;
+      text-transform: uppercase;
+      padding: 10px 15px;
+      border: 2px solid #b18597;
+      border-radius: 0.75em;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+      transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+  
+  .filterButtonsBtn::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #f9c4d2;
+      border-radius: inherit;
+      -webkit-box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+      box-shadow: 0 0 0 2px #b18597, 0 0.625em 0 0 #ffe3e2;
+      -webkit-transform: translate3d(0, 0.75em, -1em);
+      transform: translate3d(0, 0.75em, -1em);
+      transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+  
+  .filterButtonsBtn:hover {
+      background: #ffe9e9;
+      -webkit-transform: translate(0, 0.25em);
+      transform: translate(0, 0.25em);
+  }
+  

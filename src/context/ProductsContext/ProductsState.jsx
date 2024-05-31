@@ -61,19 +61,63 @@ export const ProductsProvider = ({children}) => {
             payload:newLikes
             });
         };
-    
-    
-    const getProductByName = async ()=>{
+    const getProductByName = async (data)=>{
         try {
-            const res = await axios.get(API_URL + "/:name", );
-            return res
+            const res = await axios.get(API_URL + "/"+ data );
+        
+            dispatch({
+                type: "PRODUCT_BY_NAME",
+                payload:res.data
+                })
+                return res
             } catch (error) {
                 console.error(error)
             }
         }
+        const getProductByPrice = async (data)=>{
+            try {
+                const res = await axios.get(API_URL + "/price/"+ data );
+            
+                dispatch({
+                    type: "GET_BY_PRICE",
+                    payload:res.data
+                    })
+                    return res
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+        const orderAsce = async ()=>{
+            try {
+                const res = await axios.get(API_URL + "/orderAsc" );
+            
+                dispatch({
+                    type: "ORDER_ASCEN",
+                    payload:res.data
+                    })
+                    return res               
+                } catch (error) {
+                    console.error(error)
+                }
+            }
+            const orderDesc = async ()=>{
+                try {
+                    const res = await axios.get(API_URL + "/orderDesc" );
+                
+                    dispatch({
+                        type: "ORDER_DESC",
+                        payload:res.data
+                        })
+                        return res
+                    } catch (error) {
+                        console.error(error)
+                    }
+                }
+                
+                
     return (
         <ProductsContext.Provider value={{products: state.products,cart: state.cart,likes: state.likes,
-            getProducts,addCart,clearCart,setCart,getProductByName,addLike,removeLike           
+            getProducts,addCart,clearCart,setCart,getProductByName,addLike,removeLike,orderAsce,orderDesc,getProductByPrice           
         }}>
             {children}
         </ProductsContext.Provider>
