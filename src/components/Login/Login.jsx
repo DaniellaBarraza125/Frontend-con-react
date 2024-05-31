@@ -1,59 +1,61 @@
-import "./Login.scss"
+import "./Login.scss";
 import { UserContext } from '../../context/UserContext/UserState';
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { notification } from 'antd';
-
+import { Form, Input, Button, notification } from 'antd';
 
 const Login = () => {
-  const navigate = useNavigate()
-  const {login} =useContext(UserContext)
+  const navigate = useNavigate();
+  const { login } = useContext(UserContext);
 
-  const initialValue = {
-    email: "",
-    password: " ",
-  }
-  const [data, setData] = useState(initialValue);
-
-
-const handleInputChange = (e) => {
-  setData({
-    ...data, 
-    [e.target.name]: e.target.value,
-  });
-};
-//preguntar cosas 
-const handleOnSubmit = async (e)=>{
-  e.preventDefault();
-  const res = await login(data)
-  console.log(res);
-  if (res){
-
-  setData(initialValue);
-  notification.success({
-    message: 'Welcome'
-  });
-  navigate("/profile")
-} else{
-  console.log(res);
-notification.error({
-  message: 'error'
-})
-}
-}
+  const handleOnSubmit = async (values) => {
+    const res = await login(values);
+    console.log(res);
+    if (res) {
+      notification.success({
+        message: 'Welcome'
+      });
+      navigate("/profile");
+    } else {
+      console.log(res);
+      notification.error({
+        message: 'Error',
+        description: 'Invalid email or password'
+      });
+    }
+  };
 
   return (
-
     <div className="flip-card__front">
-    <div className="title">Log in</div>
-    <form onSubmit={handleOnSubmit} className="flip-card__form">
-      <input type="email" placeholder="Email" name="email" className="flip-card__input" onChange={handleInputChange} />
-      <input type="password" placeholder="Password" name="password" className="flip-card__input" onChange={handleInputChange}/>
-      <button className="flip-card__btn">Let's go!</button>
-    </form>
-  </div>
+      <div className="title">Log in</div>
+      <Form
+        onFinish={handleOnSubmit}
+        initialValues={{ email: "", password: "" }}
+        className="flip-card__form"
+      >
+        <Form.Item
+          name="email"
+          rules={[
+            { required: true, message: 'Please input your email!' },
+            { type: 'email', message: 'The input is not a valid email!' }
+          ]}
+        >
+          <Input placeholder="Email" className="flip-card__input" />
+        </Form.Item>
+        <Form.Item
+          name="password"
+          rules={[{ required: true, message: 'Please input your password!' }]}
+        >
+          <Input.Password placeholder="Password" className="flip-card__input" />
+        </Form.Item>
+        <Form.Item>
+          <Button type="primary" htmlType="submit" className="flip-card__btn">
+            Let's go!
+          </Button>
+        </Form.Item>
+      </Form>
+    </div>
+  );
+};
 
-  )
-}
-
-export default Login
+export default Login;
