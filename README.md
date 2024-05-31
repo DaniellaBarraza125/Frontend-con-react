@@ -52,12 +52,12 @@ npm start
 A continuación se muestra una paleta de colores retro utilizada en el proyecto:
 ``
 
-| Color      | Código  | Muestra                                                                                           |
-| ---------- | ------- | ------------------------------------------------------------------------------------------------- |
-| Azul cyan  | #96f0fa | <div style="width: 20px; height: 20px; background-color: #96f0fa; border: 1px solid #000;"></div> |
-| Amarillo   | #FCFC8B | <div style="width: 20px; height: 20px; background-color: #FCFC8B; border: 1px solid #000;"></div> |
-| Lila       | #F4C8ED | <div style="width: 20px; height: 20px; background-color: #F4C8ED; border: 1px solid #000;"></div> |
-| Rosa Claro | #FFB6C1 | <div style="width: 20px; height: 20px; background-color: #FFB6C1; border: 1px solid #000;"></div> |
+| Color      | Código    | Muestra                                                                                           |
+| ---------- | --------- | ------------------------------------------------------------------------------------------------- |
+| Azul cyan  | #96f0fa   | <div style="width: 20px; height: 20px; background-color: #96f0fa; border: 1px solid #000;"></div> |
+| Amarillo   | #FCFC8B   | <div style="width: 20px; height: 20px; background-color: #FCFC8B; border: 1px solid #000;"></div> |
+| Lila       | #F4C8ED   | <div style="width: 20px; height: 20px; background-color: #F4C8ED; border: 1px solid #000;"></div> |
+| Rosa Claro | `#000000` | <div style="width: 20px; height: 20px; background-color: #FFB6C1; border: 1px solid #000;"></div> |
 
 ``
 
