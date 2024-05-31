@@ -50,6 +50,7 @@ npm start
 ## Paleta de Colores
 
 A continuación se muestra una paleta de colores retro utilizada en el proyecto:
+``
 
 | Color      | Código  | Muestra                                                                                           |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------- |
@@ -57,6 +58,8 @@ A continuación se muestra una paleta de colores retro utilizada en el proyecto:
 | Amarillo   | #FCFC8B | <div style="width: 20px; height: 20px; background-color: #FCFC8B; border: 1px solid #000;"></div> |
 | Lila       | #F4C8ED | <div style="width: 20px; height: 20px; background-color: #F4C8ED; border: 1px solid #000;"></div> |
 | Rosa Claro | #FFB6C1 | <div style="width: 20px; height: 20px; background-color: #FFB6C1; border: 1px solid #000;"></div> |
+
+``
 
 ## Capturas de Pantalla
 
