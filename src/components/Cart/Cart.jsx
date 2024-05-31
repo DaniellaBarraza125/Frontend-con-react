@@ -10,7 +10,6 @@ const Cart = () => {
   const navigate = useNavigate();
 
   const click = (input, cartItem) => {
-    console.log(input.target.value);
     cartItem.units = input.target.value;
     setCart(cartItem);
   };

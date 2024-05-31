@@ -25,6 +25,16 @@ const products = (state, action) => {
                     return item;
                 }),
             };
+        case "ADD_LIKE":
+            return {
+                ...state,
+                likes: [action.payload, ...state.likes],
+            };
+        case "REMOVE_LIKE":
+            return {
+                ...state,
+                likes: action.payload,
+            };
 
         default:
             return state;

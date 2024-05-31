@@ -1,4 +1,4 @@
-import "./Register.scss";
+import "../Login/Login.scss";
 import React, { useContext, useState, useEffect } from 'react';
 import Login from "../Login/Login";
 import { UserContext } from '../../context/UserContext/UserState';

@@ -3,7 +3,6 @@
 
 .containerProfile {
     @extend %flex;
-    background-color: #e0f7fa; 
 
     .profile {
         margin: 5%;
@@ -21,7 +20,6 @@
         .userInfo {
             @extend %flex;
             justify-content: space-between;
-            background-color:  $mainBlue;
             border-bottom: 1px solid $border;
             margin: 25px 25px 0 25px;
             padding: 5px 50px;

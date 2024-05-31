@@ -12,6 +12,7 @@ import { ProductsProvider } from './context/ProductsContext/ProductsState'
 import { UserProvider } from './context/UserContext/UserState'
 import Products from './components/Products/Products'
 import Orders from './components/Orders/Orders'
+import WishList from './components/WishList/WishList'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
                   <Route path="products" element={<Products/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/likes" element={<WishList/>}/>
                 <Route path="/orders" element={<Orders/>}/>
                 <Route path="/register" element={<Register/>}/>
           </Routes> 

@@ -41,7 +41,6 @@ const Headers = () => {
           <button className="btn"><Link to="/cart"><Badge count={cart.length} size="large">Cart</Badge></Link></button>
           <button className="btn"
             onClick={() => {
-              console.log("holi tuu")
               logout();
               navigate("/register");
             }}

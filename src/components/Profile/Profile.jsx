@@ -2,6 +2,7 @@ import { UserContext } from "../../context/UserContext/UserState";
 import Cart from "../Cart/Cart";
 import Orders from "../Orders/Orders";
 import HamsterSpiner from "../Spinner/HamsterSpiner/HamsterSpiner";
+import WishList from "../WishList/WishList";
 import "./Profile.scss"
 import React, { useContext, useEffect } from 'react'
 
@@ -22,15 +23,6 @@ const Profile = () => {
   return (
 <div className="containerProfile">
   <div className="profile">
-    <div className="userInfo">
-      <div className="profileImgContainer">
-        <img className="img" src="https://bootdey.com/img/Content/user_3.jpg" alt="User" />
-      </div>
-      <div className="info">
-        <h3>Name: {user.name}</h3>
-        <p>{user.email}</p>
-      </div>
-    </div>
     <div className="sections">
       <div className="profileSection">
         <Orders/>
@@ -38,7 +30,7 @@ const Profile = () => {
       <div className="profileSection">
           <Cart/>
         </div>
-      <div className="profileSection">soy likes</div>
+      <div className="profileSection"><WishList/></div>
     </div>
   </div>
 </div>
