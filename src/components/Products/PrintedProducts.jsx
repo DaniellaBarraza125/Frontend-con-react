@@ -10,7 +10,7 @@ const PrintedProducts = () => {
 const [data, setData] = useState("")
 
 const API_URL = "http://localhost:3002/";
-const { products, addCart, cart, addLike, getProductByName, orderAsce,orderDesc, getProductByPrice,likes } = useContext(ProductsContext);
+const { products, addCart, cart, addLike, getProductByName, orderAsce,orderDesc, getProductByPrice,likes, getProducts } = useContext(ProductsContext);
 const [productInCart, setProductInCart] = useState({});
 const [productInLikes, setProductInLikes] = useState({});
 
@@ -81,7 +81,7 @@ if (products.length <= 0) {
                 <div className="filterButtonsContainer">
                     <button className="filterButtonsBtn" onClick={()=>orderDesc()}>Desc</button>
                     <button className="filterButtonsBtn" onClick={()=>orderAsce()}>Asc</button>
-                    <button className="filterButtonsBtn">All </button>
+                    <button className="filterButtonsBtn" onClick={()=>getProducts()}>All </button>
                 </div>
             </div>
         </div>

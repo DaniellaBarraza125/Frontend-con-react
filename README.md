@@ -1,3 +1,5 @@
+![foto](/src/assets/videos/spinner.gif)
+
 # Proyecto Frontend de Comercio Electrónico
 
 Este es el frontend para una plataforma de comercio electrónico construida utilizando React, React Router y Context API. El backend para este proyecto también fue desarrollado por mí, utilizando Node.js, Sequelize y MySQL2.
@@ -49,20 +51,32 @@ npm start
 
 A continuación se muestra una paleta de colores retro utilizada en el proyecto:
 
-| Color      | Código  |
-| ---------- | ------- |
-| Azul       | #96f0fa |
-| Amarillo   | #FCFC8B |
-| Rosa       | #F4C8ED |
-| Rosa Claro | #FFB6C1 |
+| Color      | Código  | Muestra                                                                                           |
+| ---------- | ------- | ------------------------------------------------------------------------------------------------- |
+| Azul cyan  | #96f0fa | <div style="width: 20px; height: 20px; background-color: #96f0fa; border: 1px solid #000;"></div> |
+| Amarillo   | #FCFC8B | <div style="width: 20px; height: 20px; background-color: #FCFC8B; border: 1px solid #000;"></div> |
+| Lila       | #F4C8ED | <div style="width: 20px; height: 20px; background-color: #F4C8ED; border: 1px solid #000;"></div> |
+| Rosa Claro | #FFB6C1 | <div style="width: 20px; height: 20px; background-color: #FFB6C1; border: 1px solid #000;"></div> |
 
 ## Capturas de Pantalla
 
 Aquí, se muestran algunas capturas de pantalla de la aplicación:
 
-![Ejemplo de vista de productos (endPoint /products)]
+![Ejemplo de card signUp /login]
 
-<img src="./screenshotShop.png" alt="Ejemplo de vista de productos (endPoint /products)" width="500px">
+![foto](/src/assets/videos/signUp.gif)
+
+![Ejemplo de vista de productos]
+![Ejemplo de vista de productos](src/assets/screenshots/screenProducts.png)
+
+![Ejemplo de vista de orders]
+![Ejemplo de vista de order](src/assets/screenshots/screenOders2.png)
+
+![Ejemplo de vista de cart]
+![Ejemplo de vista de cart](src/assets/screenshots/screenCart.png)
+
+![Ejemplo de vista de notificaciones]
+![Ejemplo de vista de order](src/assets/screenshots/notificaciones.png)
 
 ## Repositorio del Backend
 
